@@ -61,9 +61,9 @@ class HostnameActions
                 return $this->maintenance($hostname);
             }
 
-            if ($hostname->redirect_to) {
-                return $this->redirect($hostname);
-            }
+            // if ($hostname->redirect_to) {
+            //     return $this->redirect($hostname);
+            // }
 
             if (!$request->secure() && $hostname->force_https) {
                 return $this->secure($hostname, $request);
